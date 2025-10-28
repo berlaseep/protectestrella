@@ -1,114 +1,77 @@
-/* --- General --- */
+/* style.css */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background-color: white;
-}
-
-/* --- Barra de navegación --- */
-.navbar {
-  display: flex;
-  justify-content: center;
-  border-bottom: 2px solid #ccc;
-  padding: 10px 0;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 80px;
   padding: 0;
-  margin: 0;
+  background-image: url('mandala.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #333;
 }
 
-.navbar li {
-  font-weight: bold;
-  cursor: pointer;
-  position: relative;
-}
-
-.navbar li.active {
-  color: black;
-}
-
-.navbar li.active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 100%;
-  height: 2px;
-  background-color: blue;
-}
-
-/* --- Contenedor principal --- */
 .container {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  margin-top: 40px;
-  flex-wrap: wrap;
-}
-
-/* --- Columna izquierda --- */
-.left-column {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  text-align: center;
-}
-
-.practice h3 {
-  margin-bottom: 10px;
-}
-
-.practice button {
-  border: 2px solid #500000;
-  color: black;
-  background: transparent;
-  padding: 8px 20px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.practice button:hover {
-  background-color: #500000;
-  color: white;
-}
-
-/* --- Columna derecha --- */
-.right-column {
-  text-align: center;
-}
-
-.right-column h2 {
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.tutorial-box {
-  border: 3px solid #00aaff;
-  padding: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 300px;
-  min-height: 150px;
+  height: 100vh;
+  padding: 20px;
 }
 
-.blue-text {
-  color: #0099ff;
-  font-weight: bold;
+.left-column {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* --- Responsive --- */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
+.practice h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #555;
+}
 
-  .navbar ul {
-    gap: 30px;
-  }
+.practice button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.practice button:hover {
+  background-color: #45a049;
+}
+
+/* Estilos opcionales para la barra de navegación si se descomenta */
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  overflow: hidden;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: #111;
+}
+
+.navbar .active {
+  background-color: #4CAF50;
 }
